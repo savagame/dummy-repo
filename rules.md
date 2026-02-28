@@ -1,9 +1,13 @@
-# Repository rules for PRs
+# Repository rules for PRs (agent test)
 
-Rule: pr title must match conventional commits (feat, fix, docs, etc.).
+Rule: New features must include unit tests before merge.
 
-PR description must have at least 50 characters so reviewers get context.
+Rule: All API changes require documentation in the OpenAPI spec.
 
-PRs must stay small; limit pr size to 500 lines changed.
+Always use type hints in Python files.
 
-touched rule 01
+PRs must be reviewed by at least two team members from the core team.
+
+Never commit secrets or API keys to the repository.
+
+Instruction: Deprecated code should be removed within two release cycles.
