@@ -1,15 +1,13 @@
-# Repository rules for PRs (agent test)
+# Repository rules (AI agent test)
 
 Rule: New features must include unit tests before merge.
 
-Rule: All API changes require documentation in the OpenAPI spec.
+Rule: All API changes need documentation in the OpenAPI spec.
 
-Always use type hints in Python files.
+Rule: Use type hints in Python files.
 
-PRs must be reviewed by at least two team members from the core team.
+Rule: Every change should be reviewed by two or more team members.
 
-Never commit secrets or API keys to the repository.
+Rule: Do not commit secrets or API keys to the repo.
 
-Instruction: Deprecated code should be removed within two release cycles.
-
-touched the rule01
+Rule: Deprecated code should be removed within two release cycles.
