@@ -11,3 +11,5 @@ PRs must be reviewed by at least two team members from the core team.
 Never commit secrets or API keys to the repository.
 
 Instruction: Deprecated code should be removed within two release cycles.
+
+touched the rule01
