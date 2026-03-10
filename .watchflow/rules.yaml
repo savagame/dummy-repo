@@ -14,7 +14,7 @@ rules:
   - pull_request
   parameters:
     min_description_length: 50
-- description: Limit pull request size to a maximum of 500 lines changed
+- description: PR must not exceed 500 lines changed
   enabled: true
   severity: medium
   event_types:
