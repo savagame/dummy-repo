@@ -7,17 +7,17 @@ rules:
   parameters:
     title_pattern: ^feat|^fix|^docs|^style|^refactor|^test|^chore|^perf|^ci|^build|^revert
 - description: PR description must have at least 50 characters to provide sufficient
-    context for reviewers.
+    context for reviewers
   enabled: true
   severity: medium
   event_types:
   - pull_request
   parameters:
     min_description_length: 50
-- description: PR must not exceed 500 lines changed
+- description: Limit pull requests to a maximum of 500 lines changed to keep PRs small.
   enabled: true
   severity: medium
   event_types:
   - pull_request
   parameters:
-    max_lines: 500
+    max_pr_loc: 500
