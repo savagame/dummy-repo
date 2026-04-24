@@ -1,14 +1,23 @@
 rules:
-  - description: Simple rule to test local setup
-    enabled: true
-    severity: medium
-    event_types: [pull_request]
-    parameters:
-      test_param: "local_test"
-
-  - description: All pull requests must have at least 1 approval
-    enabled: true
-    severity: high
-    event_types: [pull_request]
-    parameters:
-      min_approvals: 1
+- description: PR title must follow conventional commits (feat, fix, docs, etc.)
+  enabled: true
+  severity: medium
+  event_types:
+  - pull_request
+  parameters:
+    title_pattern: ^feat|^fix|^docs|^style|^refactor|^test|^chore|^perf|^ci|^build|^revert
+- description: PR description must have at least 50 characters to provide sufficient
+    context for reviewers
+  enabled: true
+  severity: medium
+  event_types:
+  - pull_request
+  parameters:
+    min_description_length: 50
+- description: Limit pull requests to a maximum of 500 lines changed to keep PRs small.
+  enabled: true
+  severity: medium
+  event_types:
+  - pull_request
+  parameters:
+    max_pr_loc: 500
